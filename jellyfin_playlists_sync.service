@@ -6,7 +6,6 @@ After=network.target
 
 [Service]
 type=simple
-RemainAfterExit=yes
 
 User=root
 Group=root
