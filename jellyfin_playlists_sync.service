@@ -1,0 +1,19 @@
+#This file must be placed in /usr/lib/systemd/system/
+
+[Unit]
+Description=Jellyfin playlists sync service
+After=network.target
+
+[Service]
+type=simple
+RemainAfterExit=yes
+
+User=root
+Group=root
+
+# The directory where you downloaded this program
+WorkingDirectory={{playlists_sync_installation_path}}
+ExecStart=python3 playlists_sync.py scan
+
+[Install]
+WantedBy=multi-user.target

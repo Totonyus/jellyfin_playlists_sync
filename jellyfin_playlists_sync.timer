@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync playlists automatically
+
+[Timer]
+OnCalendar=23:45:00
+
+[Install]
+WantedBy=timers.target
